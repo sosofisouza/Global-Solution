@@ -1,0 +1,314 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  background: #071428;
+  color: #e6eef6;
+  line-height: 1.4;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* cabeçalho */
+.cabecalho {
+  background: rgba(0, 0, 0, 0.15);
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+  border-radius: 8px;
+}
+.topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #fff;
+  text-decoration: none;
+}
+.destaque {
+  color: #06b6d4;
+}
+.menu a {
+  color: #bfcbd9;
+  margin-left: 14px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* hero full-width */
+.hero {
+  width: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(2, 8, 18, 0.6),
+    rgba(2, 6, 23, 0.85)
+  );
+  padding: 56px 0;
+  margin-bottom: 28px;
+}
+.texto-heroi {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 28px;
+  background: rgba(2, 8, 18, 0.15);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(2, 6, 23, 0.5);
+}
+.texto-heroi h1 {
+  font-size: 42px;
+  line-height: 1.02;
+  margin-bottom: 8px;
+  color: #f4fbff;
+  text-shadow: 0 6px 26px rgba(0, 0, 0, 0.45);
+}
+.texto-heroi .descricao {
+  color: #bfcbd9;
+  margin-top: 8px;
+  font-size: 16px;
+}
+.acoes {
+  margin-top: 18px;
+  display: flex;
+  gap: 12px;
+}
+.botao {
+  display: inline-block;
+  padding: 10px 16px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+.botao.primario {
+  background: linear-gradient(90deg, #6366f1, #06b6d4);
+}
+.botao:hover {
+  transform: scale(1.05);
+}
+
+/* main content */
+.main-content {
+  padding: 8px 0 40px;
+}
+.cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* cards iniciais (largos, texto à esquerda) */
+.iniciais {
+  flex-direction: column;
+  align-items: center;
+  padding-left: 28px;
+}
+.card {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 18px;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(2, 6, 23, 0.5);
+  width: 100%;
+  max-width: 920px;
+}
+.card.grande {
+  min-height: 140px;
+  padding: 22px;
+  text-align: left;
+  transition: transform 0.3s;
+}
+.card.grande h3 {
+  margin-bottom: 8px;
+  color: #eafcff;
+}
+.card.grande p {
+  color: #dff6fb;
+  line-height: 1.5;
+}
+
+/* hover simples: sobe 10px */
+.iniciais .card.grande:hover {
+  transform: translateY(-10px);
+}
+
+/* cards principais (Missão/Visão/Valores) centralizados com zoom */
+.principais {
+  display: flex;
+  gap: 18px;
+  justify-content: space-between;
+  align-items: stretch;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  padding: 0;
+}
+.principais .card {
+  flex: 1 1 0;
+  min-width: 220px;
+  background: linear-gradient(90deg, #6366f1, #06b6d4);
+  color: #ffffff;
+  padding: 28px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 160px;
+  transition: transform 0.3s;
+}
+.principais .card:hover {
+  transform: scale(1.05);
+}
+.principais .card h3 {
+  color: #fff;
+  margin-bottom: 8px;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
+}
+.valores {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  display: block;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.rodape {
+  margin-top: 20px;
+  padding: 24px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.03);
+}
+.rodape-inner {
+  display: flex;
+  gap: 24px;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 0 0 12px;
+}
+.rodape-sobre h4,
+.rodape-contatos h4 {
+  margin-bottom: 8px;
+  color: #e6eef6;
+}
+.rodape-contatos ul {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.rodape-contatos a {
+  color: #bfcbd9;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* === Início: estilos adicionais específicos para skills.html e contato.html === */
+/* Regras novas — ANEXAR ao final do style.css existente */
+
+/* botao pequeno (variante) */
+.botao.pequeno {
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+/* reaproveita .texto-heroi look quando usada em páginas internas */
+.texto-heroi {
+  margin: 22px 0;
+  padding: 18px;
+  background: rgba(2,8,18,0.12);
+  border-radius: 10px;
+}
+
+/* SKILLS - áreas e grid de cards */
+.area {
+  margin: 18px 0 36px 0;
+}
+.area h2 {
+  color: #f4fbff;
+  margin-bottom: 12px;
+  text-shadow: 0 4px 20px rgba(0,0,0,0.45);
+}
+
+/* Reaproveita .cards para grid de 3 colunas nas áreas */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+}
+
+/* .card já existe — acrescentar pequenas variações sem sobrepor */
+.card h3 { color: #eafcff; margin-bottom: 8px; }
+.card ul { margin-left: 14px; color: #dff6fb; list-style: disc; }
+
+/* contato: formulário e lista de habilidades */
+.contact-form { /* caso você queira usar — mantive por compatibilidade */ }
+
+.field { display:flex; flex-direction:column; gap:8px; margin-bottom:12px; }
+.field label { font-weight:600; color: #bfcbd9; font-size:0.95rem; }
+.field input, .field textarea, .input-pequeno {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.04);
+  padding: 10px 12px;
+  border-radius: 10px;
+  color: #e6eef6;
+  font-size: 0.95rem;
+}
+.field textarea { min-height:120px; resize:vertical; }
+
+/* lista de habilidades (chips) */
+.lista-habilidades { display:flex; gap:8px; flex-wrap:wrap; margin-top:12px; }
+.chip {
+  background: rgba(255,255,255,0.04);
+  padding:8px 10px;
+  border-radius:999px;
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  color:#dff6fb;
+  font-weight:600;
+}
+.chip-remove {
+  background:transparent;
+  border:0;
+  color:#bfcbd9;
+  cursor:pointer;
+  font-size:0.85rem;
+  padding:0 4px;
+}
+
+/* pequenos ajustes de layout */
+.linha-habilidade { display:flex; gap:10px; align-items:center; }
+.acoes-form { margin-top:14px; display:flex; gap:12px; align-items:center; }
+
+/* responsividade: ajustar colunas e tamanho */
+@media (max-width: 920px) {
+  .cards { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+  .texto-heroi h1 { font-size: 28px; }
+}
+@media (max-width: 600px) {
+  .acoes { display:flex; flex-wrap:wrap; gap:8px; }
+  .linha-habilidade { flex-direction:column; align-items:stretch; }
+  .botao.pequeno { width:100%; text-align:center; }
+}
+
+/* === Fim: estilos adicionais === */

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contato — Futuro+</title>
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="cabecalho">
+    <div class="container topo">
+      <a href="index.html" class="logo">Futuro<span class="destaque">+</span></a>
+      <nav class="menu">
+        <a href="index.html">Início</a>
+        <a href="skills.html">Áreas</a>
+        <a href="contato.html">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container main-content">
+    <section class="card card-flat contact-form">
+      <h1>Inscreva-se para orientação</h1>
+      <p class="descricao">Preencha o formulário para receber sugestões.</p>
+
+      <form id="formRequal" novalidate>
+        <div class="field">
+          <label for="nome">Nome completo</label>
+          <input id="nome" type="text" placeholder="Seu nome completo" />
+        </div>
+
+        <div class="field">
+          <label for="cpf">CPF</label>
+          <input id="cpf" type="text" placeholder="Somente números" maxlength="11" />
+        </div>
+
+        <div class="field">
+          <label for="email">E-mail</label>
+          <input id="email" type="email" placeholder="seu@email.com" />
+        </div>
+
+        <div class="field">
+          <label for="funcao">Função atual</label>
+          <input id="funcao" type="text" placeholder="Ex: Assistente administrativo" />
+        </div>
+
+        <div class="field">
+          <label>Habilidades</label>
+          <div class="row linha-habilidade">
+            <input id="skillInput" class="input-pequeno" type="text" placeholder="Adicionar habilidade (ex: Excel)" />
+            <button type="button" class="botao pequeno" id="adicionaSkill">Adicionar</button>
+          </div>
+        </div>
+
+        <div id="listaSkills" class="lista-habilidades" aria-live="polite"></div>
+
+        <div class="acoes-form">
+          <button type="submit" class="botao primario">Enviar</button>
+        </div>
+
+        <div id="mensagem" aria-live="polite" class="small"></div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="container rodape-inner">
+      <div class="rodape-sobre">
+        <h4>Futuro+</h4>
+        <p>Plataforma guia de requalificação — apresentação do grupo.</p>
+      </div>
+
+      <div class="rodape-contatos">
+        <h4>Contato</h4>
+        <ul>
+          <li><a href="mailto:contato@futuroplus.com"><i class='bx bx-envelope'></i> contato@futuroplus.com</a></li>
+          <li><a href="tel:+5511999999999"><i class='bx bx-phone'></i> +55 (11) 99999-9999</a></li>
+          <li><a href="https://instagram.com/futuroplus" target="_blank" rel="noopener"><i class='bx bxl-instagram'></i> @futuroplus</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
